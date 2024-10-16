@@ -71,6 +71,8 @@ fdr <- 0.2
 #   fdr = fdr, test_statistic = "DE", filter_statistics = 1
 # )
 # ZIPG_DE_S3$FDRPower
+# i <- 1, 0.20 0.19 0.72  
+# i <- 2, 0.20 0.22 0.78  
 ```
 
 ## Simulated data generation
