@@ -41,12 +41,15 @@ selection during the implementation of ZIPGSK:
 ``` r
 # library(ZIPGSK)
 # library(pscl)
+# library(knockoff)
+# library(ZIPG)
+# library(MASS)
 
 ## basic example code
 
 data(data_pg_copula)
-i <- 1 # or 2
-data_K_j <- data_pg_copula[[1]][[1]][[i]][[1]][[1]]
+i <- 2 # or 1
+data_K_j <- data_pg_copula[[i]] 
 count_K_j <- data_K_j # [data_K_j[,1]==c,]
 n_x1 <- 3
 data_x <- as.data.frame(count_K_j[, c(1:n_x1 + 1)])
@@ -56,15 +59,17 @@ n_w <- dim(W)[1]
 n_data <- 2
 y <- rep(rep(c(1, 2), n_data), rep(n_w / 2 / n_data, n_data * 2))
 class_K <- rep(c(1:n_data), rep(n_w / n_data, n_data))
-n_p_all <- c(50, 100, 400)
-n_p <- c(10, 20, 40)
+n_p  <-  c(40,50)
+n_p_all <- c(400,500)
 T_var <- 1:n_p[i]
 name_data <- names(table(class_K))
+
 fdr <- 0.2
 
-# ZIPG_DE_S3 <- ZIPGSK(W = W, class_K = class_K, data_x = data_x, M = M, y = y, T_var = T_var,
-#                    fdr = fdr, test_statistic = 'DE', filter_statistics = 3)
-# ZIPG_DE_S3$S
+# ZIPG_DE_S3 <- ZIPG_SK(
+#   W = W, class_K = class_K, data_x = data_x, M = M, y = y, T_var = T_var,
+#   fdr = fdr, test_statistic = "DE", filter_statistics = 1
+# )
 # ZIPG_DE_S3$FDRPower
 ```
 

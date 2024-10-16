@@ -22,8 +22,8 @@
 #'
 #' @examples
 #' data_pg_copula <- simulate_datasets_3(
-#'   times = 1, n_data = 2, n_1_all = c(400, 400), n_p_all = c(50, 100, 400), n_p = c(10, 20, 40),
-#'   diff = 0, prob_max = 0.5, marginal1 = "pg", copula1 = TRUE, fc1 = 1,
+#'   times = 1, n_data = 2, n_1_all = c(400, 400), n_p_all = c(400, 500), n_p = c(40, 50),
+#'   diff = 10, prob_max = 0.5, marginal1 = "pg", copula1 = TRUE, fc1 = 1,
 #' )
 #' data_K_j <- data_pg_copula[[1]][[1]][[i]][[1]][[1]] # i = 1,2;
 #'

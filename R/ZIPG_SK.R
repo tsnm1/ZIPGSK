@@ -22,8 +22,8 @@
 #' @examples
 #'
 #' data(data_pg_copula)
-#' i <- 1 # or 2
-#' data_K_j <- data_pg_copula[[1]][[1]][[i]][[1]][[1]]
+#' i <- 2 # or 1
+#' data_K_j <- data_pg_copula[[i]]
 #' count_K_j <- data_K_j # [data_K_j[,1]==c,]
 #' n_x1 <- 3
 #' data_x <- as.data.frame(count_K_j[, c(1:n_x1 + 1)])
@@ -33,15 +33,15 @@
 #' n_data <- 2
 #' y <- rep(rep(c(1, 2), n_data), rep(n_w / 2 / n_data, n_data * 2))
 #' class_K <- rep(c(1:n_data), rep(n_w / n_data, n_data))
-#' n_p_all <- c(50, 100, 400)
-#' n_p <- c(10, 20, 40)
+#' n_p  <-  c(40,50)
+#' n_p_all <- c(400,500)
 #' T_var <- 1:n_p[i]
 #' name_data <- names(table(class_K))
 #' fdr <- 0.2
 #'
 #' ZIPG_DE_S3 <- ZIPG_SK(
 #'   W = W, class_K = class_K, data_x = data_x, M = M, y = y, T_var = T_var,
-#'   fdr = fdr, test_statistic = "DE", filter_statistics = 3
+#'   fdr = fdr, test_statistic = "DE", filter_statistics = 1
 #' )
 #' ZIPG_DE_S3$S
 #' ZIPG_DE_S3$FDRPower
@@ -550,7 +550,7 @@ result_cv <- function(r_ZIPG_SK_cv, B = 1, filter_statistics = NULL, In = F, b_1
 #'
 #' data(data_pg_copula)
 #' i <- 1 # or 2
-#' data_K_j <- data_pg_copula[[1]][[1]][[i]][[1]][[1]]
+#' data_K_j <- data_pg_copula[[i]]
 #' count_K_j <- data_K_j # [data_K_j[,1]==c,]
 #' n_x1 <- 3
 #' data_x <- as.data.frame(count_K_j[, c(1:n_x1 + 1)])
@@ -560,15 +560,15 @@ result_cv <- function(r_ZIPG_SK_cv, B = 1, filter_statistics = NULL, In = F, b_1
 #' n_data <- 2
 #' y <- rep(rep(c(1, 2), n_data), rep(n_w / 2 / n_data, n_data * 2))
 #' class_K <- rep(c(1:n_data), rep(n_w / n_data, n_data))
-#' n_p_all <- c(50, 100, 400)
-#' n_p <- c(10, 20, 40)
+#' n_p  <-  c(40,50)
+#' n_p_all <- c(400,500)
 #' T_var <- 1:n_p[i]
 #' name_data <- names(table(class_K))
 #' fdr <- 0.2
 #'
 #' ZIPG_DE_S3 <- ZIPG_SK_other(
 #'   W = W, class_K = class_K, data_x = data_x, M = M, y = y, T_var = T_var,
-#'   fdr = fdr, method = "ZIPG", test_statistic = "DE", filter_statistics = 3
+#'   fdr = fdr, method = "ZIPG", test_statistic = "DE", filter_statistics = 1
 #' )
 ZIPG_SK_other <- function(W = W, class_K = NULL, data_x = NULL, M = NULL, y = y, T_var = NULL, fdr = 0.2, offset = 1,
                           method = "ZIPG", test_statistic = "DE", filter_statistics = 3, test1 = "wilcox.test") {
@@ -713,7 +713,7 @@ ZIPG_SK_other <- function(W = W, class_K = NULL, data_x = NULL, M = NULL, y = y,
 #'
 #' data(data_pg_copula)
 #' i <- 1 # or 2
-#' data_K_j <- data_pg_copula[[1]][[1]][[i]][[1]][[1]]
+#' data_K_j <- data_pg_copula[[i]]
 #' count_K_j <- data_K_j # [data_K_j[,1]==c,]
 #' n_x1 <- 3
 #' data_x <- as.data.frame(count_K_j[, c(1:n_x1 + 1)])
@@ -723,8 +723,8 @@ ZIPG_SK_other <- function(W = W, class_K = NULL, data_x = NULL, M = NULL, y = y,
 #' n_data <- 2
 #' y <- rep(rep(c(1, 2), n_data), rep(n_w / 2 / n_data, n_data * 2))
 #' class_K <- rep(c(1:n_data), rep(n_w / n_data, n_data))
-#' n_p_all <- c(50, 100, 400)
-#' n_p <- c(10, 20, 40)
+#' n_p  <-  c(40,50)
+#' n_p_all <- c(400,500)
 #' T_var <- 1:n_p[i]
 #' name_data <- names(table(class_K))
 #' fdr <- 0.2
@@ -732,7 +732,7 @@ ZIPG_SK_other <- function(W = W, class_K = NULL, data_x = NULL, M = NULL, y = y,
 #'
 #' ZIPG_DE_S3_B2 <- ZIPG_SK_B_other(
 #'   W = W, class_K = class_K, data_x = data_x, M = M, y = y, T_var = T_var, fdr = fdr, method = "ZIPG",
-#'   B = B, Bstat = 1, test_statistic = "DE", filter_statistics = 3, combine_1 = "simul"
+#'   B = B, Bstat = 1, test_statistic = "DE", filter_statistics = 1, combine_1 = "simul"
 #' )
 #' ZIPG_DE_S3$S
 #' ZIPG_DE_S3$FDRPower
