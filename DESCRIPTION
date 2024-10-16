@@ -1,0 +1,21 @@
+Package: ZIPGSK 
+Title: Simultaneous knockoff for multi-source count data.
+Version: 0.0.0.9000
+Authors@R: 
+    person("Shan", "Tang", , "tangshanhaha@hnu.edu.cn", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0003-2196-3201"))
+Description: A novel knockoff method for enhancing multi-source count data is proposed. This method is primarily based on the Gaussian copula framework of the zero-inflated Poisson–Gamma (ZIPG) distribution for knockoff generation, and is combined with the Simultaneous Knockoff method to address variable selection in multi-source data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    renv
+Imports: 
+    knockoff,
+    scDesign2,
+    ZIPG
+Depends: 
+    R (>= 2.10)
+LazyData: true
+
