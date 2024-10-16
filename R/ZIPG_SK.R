@@ -54,6 +54,7 @@ ZIPG_SK <- function(W = W, class_K = class_K, data_x = NULL, M = NULL, y = y, T_
   library(ZIPG)
   # library(scDesign2)
   library(knockoff)
+  library(MASS)
   if (is.null(class_K)) {
     class_K <- rep(1, dim(W)[1])
   }
@@ -198,6 +199,7 @@ ZIPG_SK_B <- function(W = W, class_K = NULL, data_x = NULL, M = NULL, y = y, T_v
   library(ZIPG)
   # library(scDesign2)
   library(knockoff)
+  library(MASS)
   if (is.null(class_K)) {
     class_K <- rep(1, dim(W)[1])
   }
@@ -415,9 +417,9 @@ ZIPG_SK_cv <- function(W = W, class_K = NULL, data_x = NULL, M = NULL, y = y, T_
   # if (!require(scDesign2)) devtools::install_github("JSB-UCLA/scDesign2")
   if (!require(knockoff)) install.packages(knockoff)
   library(ZIPG)
-  library(scDesign2)
+  # library(scDesign2)
   library(knockoff)
-
+  library(MASS)
   if (is.null(class_K)) {
     class_K <- rep(1, dim(W)[1])
   }
@@ -578,7 +580,7 @@ ZIPG_SK_other <- function(W = W, class_K = NULL, data_x = NULL, M = NULL, y = y,
   library(ZIPG)
   library(scDesign2)
   library(knockoff)
-
+  library(MASS)
   if (is.null(class_K)) {
     class_K <- rep(1, dim(W)[1])
   }
@@ -746,7 +748,7 @@ ZIPG_SK_B_other <- function(W = W, class_K = NULL, data_x = NULL, M = NULL, y = 
   library(ZIPG)
   library(scDesign2)
   library(knockoff)
-
+  library(MASS)
   if (is.null(class_K)) {
     class_K <- rep(1, dim(W)[1])
   }
