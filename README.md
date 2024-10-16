@@ -8,6 +8,8 @@
 [![R-CMD-check](https://github.com/tsnm1/ZIPGSK/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tsnm1/ZIPGSK/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/tsnm1/ZIPGSK/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tsnm1/ZIPGSK?branch=main)
+[![Codecov test
+coverage](https://codecov.io/gh/tsnm1/ZIPGSK/graph/badge.svg)](https://app.codecov.io/gh/tsnm1/ZIPGSK)
 <!-- badges: end -->
 
 Zero Inflated Poisson-Gamma based Simultaneous knockoff (ZIPGSK) is a

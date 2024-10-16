@@ -61,6 +61,7 @@ data_x <- as.data.frame(count_K_j[, c(1:n_x1 + 1)])
 W <- as.data.frame(count_K_j[, -c(1:(n_x1 + 2))])
 M <- count_K_j[, n_x1 + 2]
 n_w <- dim(W)[1]
+n_data <- 2
 y <- rep(rep(c(1, 2), n_data), rep(n_w / 2 / n_data, n_data * 2))
 class_K <- rep(c(1:n_data), rep(n_w / n_data, n_data))
 n_p_all <- c(50, 100, 400)
