@@ -340,8 +340,8 @@ ZIPG_Estimate_3_1 <- function(data_x, W, M, zp_cutoff = 0.8, min_nonzero_num = 1
     sum(y < 1e-5) / n1
   })
   # plot(sort(gene_zero_prop))
-  zp_cutoff <- 0.8
-  min_nonzero_num <- 1
+  # zp_cutoff <- 0.8
+  # min_nonzero_num <- 1
 
   gene_sel1 <- as.integer(which(gene_zero_prop < zp_cutoff))
   gene_sel2 <- as.integer(which(gene_zero_prop <= 1.0 - min_nonzero_num / n1 &
